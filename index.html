@@ -57,7 +57,7 @@
             $('propVal').html(segmentedProp)
 
             var usageByTeam = new Promise(function(resolve,reject) {
-              MP.api.segment(activeEvent, segmentedProp, {type: 'unique', from: moment().subtract(3, 'months', limit: 15), unit: 'month'})
+              MP.api.segment(activeEvent, segmentedProp, {type: 'unique', from: moment().subtract(3, 'months'), limit: 15, unit: 'month'})
                   .done(function(result) {      
                     
                     resolve(result.values())
