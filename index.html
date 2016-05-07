@@ -38,7 +38,7 @@
   <body class="mixpanel-platform-body">
       <img src='https://www.novus.com/wp-content/uploads/2014/08/Logo-for-Web2.png' height='50' id='novusLogo'/>
       <img src='http://www.tropical.io/wp-content/uploads/2014/04/mixpanel_500X1891.png' height='50' id='mpLogo'/>
-      <p>Chart 1: Unique Users by <span id='propVal'></span>, past 3 months</p>
+      <p>Chart 1: Unique Users by Region, past 3 months</p>
       <div id='chart1'></div>
       <p>Chart 2: DAU, WAU, MAU, Past 60 days </p>
       <div id='chart2'></div>
@@ -53,7 +53,7 @@
             var promises = []
 //            var tableData = {}
             var activeEvent = "Loaded a Page"
-            var segmentedProp = "Role"
+            var segmentedProp = "$region"
             $('propVal').html(segmentedProp)
 
             var usageByTeam = new Promise(function(resolve,reject) {
